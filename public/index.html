@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xato S3erver D3v</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">
+        <i data-lucide="terminal"></i>
+      </div>
+      <div>
+        <h1>Xato S3erver D3v</h1>
+        <p class="muted">Sistema de automatización de WhatsApp</p>
+      </div>
+    </div>
+    <div class="status-global">
+      <span class="dot" id="global-dot"></span>
+      <span id="global-status">Conectando...</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2><i data-lucide="server"></i> Servidores</h2>
+      <div class="servers-grid" id="servers-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2><i data-lucide="user-plus"></i> Registrar número</h2>
+      <form id="register-form" class="register-form">
+        <label for="phone">Número de celular (con código de país, sin símbolos)</label>
+        <input id="phone" name="phone" type="tel" placeholder="51987654321" required />
+        <button type="submit" class="btn btn-primary">
+          <i data-lucide="qr-code"></i> Generar QR
+        </button>
+      </form>
+      <div id="qr-panel" class="qr-panel hidden">
+        <div class="qr-frame">
+          <img id="qr-image" alt="Código QR" />
+        </div>
+        <p class="muted" id="qr-hint">
+          Escanea el QR desde WhatsApp → Dispositivos vinculados
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2><i data-lucide="message-square"></i> Bot Xato Ds — Comandos</h2>
+      <ul class="commands-list">
+        <li><code>!help</code><span>Lista de comandos</span></li>
+        <li><code>!ping</code><span>Estado del bot</span></li>
+        <li><code>!info</code><span>Estado de los servidores</span></li>
+        <li><code>!echo [texto]</code><span>Repite el texto</span></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2><i data-lucide="list"></i> Sesiones activas</h2>
+      <div id="sessions-list" class="sessions-list"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

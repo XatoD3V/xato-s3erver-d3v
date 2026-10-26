@@ -1,0 +1,26 @@
+{
+  "name": "xato-s3erver-d3v",
+  "version": "1.0.0",
+  "description": "Sistema multi-servidor de automatización de WhatsApp con bot Xato Ds",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["whatsapp", "bot", "baileys", "automation"],
+  "author": "Xato Dev",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.2.2",
+    "qrcode": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
